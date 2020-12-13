@@ -1,0 +1,219 @@
+@import "mixins";
+@import "variables";
+
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    @include body;
+}
+
+header{
+    @include header;
+    display: flex;
+    justify-content: space-between;
+    /*width: 247px;*/ 
+    width: 66%;
+    /*margin-right: 105px;*/ 
+    margin-right: 28%;
+}
+
+main{
+    .container{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .contain-heading{
+            height: 256px;
+            &__img{
+                object-fit: cover;
+            }    
+        }
+    }
+}
+.bloc{
+    background-color: #f2f2f2;
+    border-radius: 35px 35px 0 0;
+    padding: 10px 11px 40px 14px;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    top: 80%;
+
+}
+.bloc-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    grid-template-areas:"menu1"
+                        "menu2"
+                        "menu3" 
+                        "bouton";
+    &:nth-child(1){
+        grid-area: menu1;
+    }
+    &:nth-child(2){
+        grid-area: menu2;
+    }
+    &:nth-child(3){
+        grid-area: menu3;
+    }
+}
+.bloc-menu__etape{
+    display: grid;
+    grid-template-columns: 1fr;
+    h3{
+        grid-column: 1/-1;
+    }
+    h3{
+        content: "";
+        width: 40px;
+        border-bottom: 4px solid $color-tertiaire;
+    }
+}
+
+.menu__tarif{
+    display: block;
+    position: absolute;
+}
+.bloc-heading{
+    @include flex;
+    width: 90%;
+    .bloc-heading__text{
+        font-size: 1.7rem;
+        font-family: $fontfam-title;
+    }
+}
+.bloc-heading__icon{
+    font-size: 1.5rem;
+    .icon-plein{
+        display: none;
+    }
+    .icon-vide{
+        display: block;
+    }
+    &:hover{
+        .icon-plein{
+            display: block;
+            background: linear-gradient($color-primaire, $color-secondaire);
+            background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+            background: -moz-linear-gradient($color-primaire, $color-secondaire);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            animation: coeur 5s;
+        }
+        @keyframes coeur {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .icon-vide{
+            display: none;
+        }
+    }
+}
+.brochure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+.brochure--page2{
+    height: 334px;
+}
+.menu {
+    border-radius: 20px;
+    padding: 28px;
+    width: 98%;
+    height: 70px;
+    align-items: center;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    &:nth-child(1){
+        animation: defile 800ms 200ms forwards;
+    }
+    &:nth-child(2){
+        animation: defile 800ms 400ms forwards;
+    }
+    &:nth-child(3){
+        animation: defile 800ms 600ms forwards;
+    }
+    &:nth-child(4){
+        animation: defile 800ms 800ms forwards;
+    }
+    .box-icon{
+        display: none;
+    }
+    .menu__text{
+        .titre_plat{
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 0.1rem;
+        }
+    }
+    &:hover{
+        .box-icon{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            display: block;
+            background-color: $color-tertiaire;
+            i{
+                background-color: #fff;
+            }
+        }
+        animation: box-icon 1s forwards;
+    }
+    @keyframes box-icon {
+        0%{
+            transform: translateX(50px);
+        }
+        100%{
+            transform: translate(-50px);
+        }
+    }
+}
+
+
+@keyframes defile{
+    0%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.btn{
+    grid-area: bouton;
+    @include btn;
+    width: 188px;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    border: none;
+}
+
+.footer{
+    @include footer;
+    position: absolute;
+    z-index: 1;
+    top: 1490px;
+    width: 100%;
+ }
+ .footer--page2{
+     top: 1570px;
+ }
