@@ -12,59 +12,49 @@ body{
     @include body;
     
 }
-.chargement{
-    border: 10px solid #f2f2f2;
-    border-top: 10px solid $color-primaire;
-    border-bottom: 10px solid $color-secondaire;
-    /*height: 100px;
-    width: 100px;*/
-    height: 100vh;
-    width: 100vh;
-    border-radius: 50%;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    animation: spin 2s linear forwards; 
-    -moz-animation: spin 2s linear forwards; 
-    -webkit-animation: spin 2s linear forwards;
-    
-}
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-        opacity: 0;
+.loading-spinner {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    transform: scale(0);
+    background-color: #000;
+    /*background-color: rgba(245, 245, 245, 0.5);*/
+    animation: load-background 3s 100ms backwards;
+    .spinner {
+        transform: scale(0);
+        font-size: 8rem;
+        color: #9356DC;
+        margin: auto;
+        animation: load-spinner 3s 100ms linear backwards;
     }
 }
-@-moz-keyframes spin{
-    0%{
-        -moz-transform: rotate(0deg);
+   
+  
+  @keyframes load-spinner {
+    0% {
+      transform: rotate(0deg);
     }
-    100%{
-        -moz-transform: rotate(360deg);
-        opacity: 0;
+    75% {
+      opacity: 0.75;
     }
-}
-@-webkit-keyframes spin{
-    0%{
-        -webkit-transform: rotate(0deg);
+    100% {
+      transform: rotate(3turn);
+      opacity: 0;
     }
-    100%{
-        -webkit-transform: rotate(360deg);
-        opacity: 0;
+  }
+  @keyframes load-background {
+    0%, 100% {
+      transform: scale(1);
+      height: 100vh;
+      width: 100vw;
     }
-}
+  }
+
 main{
     grid-area: main;
     display: grid;
-    grid-template-rows: /*64px*/ 50px 286px 440px 1226.5px /*196.5px*/;
-    grid-template-areas: /*"header"*/
-                         "heading"
+    grid-template-rows:  50px 286px 440px 1226.5px ;
+    grid-template-areas: "heading"
                          "menu"
                          "fonctionnement"
                          "restaurants";
@@ -100,36 +90,35 @@ header{
     p{
         font-size: 1.1rem;
         margin-bottom: 1.75rem;
-    }
-    .btn{
-       @include btn;
-    }
-   
+    } 
+    & .btn{
+        @include btn;
+    } 
 }
 .fonctionnement{
     grid-area: fonctionnement;
     padding: 30px 20px 65px 20px ;
     .fonctionnement__box{
-        height: 17.25rem;
         display: grid;
         row-gap: 20px;
         grid-template-columns: 1fr;
         text-decoration: none;
         align-items: center;
     }
+    .fonctionnement-title{
+        margin-left: 5%;
+    }
 }
 .fonctionnement-div{
     background-color: $color-bg;
     border-radius: 20px;
-    padding: 28px;
-    /*width: 330px;*/ 
+    padding: 1.75rem;
     width: 90%;
     margin: auto;
     &:hover{
         background-color: lighten($color-primaire, 35%);
         .a-text i{
             font-size: 1.2rem;
-            /*opacity: 0.5;*/
             color: $color-primaire;
         }
     }
@@ -158,20 +147,21 @@ header{
     transform: translate(-50%,-50%);
 }
 .a-text span{
-    margin-left: 25px;
-    margin-right: 40px;
+    margin-left: 6.6%;
+    margin-right: 10.66%;
 }
+
 .restaurants{
     grid-area: restaurants;
     background-color: $color-font;
     padding: 30px 20px 60px 20px ;
+    margin: 0;
     .restaurants-box{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 1090px;
         margin: 0;
         padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
     }
 }
 .restaurants-img{
@@ -197,7 +187,6 @@ header{
 }
 .restaurants-text{
     @include flex;
-    /*width: 18.75rem;*/
     width: 90%;
     .restaurants-text__i{
         font-size: 1.5rem;
@@ -240,9 +229,7 @@ header{
 }
 
 .restaurants-box__part{
-    /*width: 21rem;*/
     width: auto;
-    height: 254px;
     margin: auto;
     text-decoration: none;
     border-radius: 20px;
@@ -254,4 +241,79 @@ header{
 }
 footer{
    @include footer;
+}
+
+@media only screen and (min-width:684px) and (max-width:1024px){
+    main{
+        grid-template-rows: 50px 300px 300px 700px ;
+        grid-template-areas: "heading" 
+                             "menu"
+                             "fonctionnement" 
+                             "restaurants";
+                             
+    }
+    .fonctionnement{
+        margin: 0;
+        padding: 20px;
+        .fonctionnement__box {
+            display: grid;
+            margin: auto;
+            row-gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            .fonctionnement-div{
+                &:nth-child(3){
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    .restaurants{
+        margin: 0;
+        .restaurants-box {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    /*footer{
+        @include footer;
+        .footer__element{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "premier deuxieme";
+        }
+    } */
+}
+@media only screen and (min-width:1025px) {
+    main{
+        grid-template-rows: 50px 286px 300px 700px ;
+        grid-template-areas: "heading" 
+                             "menu"
+                             "fonctionnement" 
+                             "restaurants";
+    }
+    .fonctionnement{
+        margin: 0;
+        padding: 20px;
+        .fonctionnement__box {
+            display: grid;
+            margin: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .restaurants{
+        margin: 0;
+        .restaurants-box {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+   /* footer{
+        @include footer;
+        .footer__element{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    } */
 }
