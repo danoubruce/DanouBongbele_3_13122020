@@ -18,6 +18,11 @@ header{
     justify-content: space-between;
     width: 66%;
     margin-right: 28%;
+    .flex{
+        color: $color;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
 }
 
 main{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
@@ -63,15 +68,18 @@ main{
 .bloc-menu__etape{
     display: grid;
     grid-template-columns: 1fr;
-    h3{
+    .title{
         grid-column: 1/-1;
         margin-left: 3%;
-    }
-    h3{
-        content: "";
+        /*content: "";*/
         width: 40px;
         border-bottom: 4px solid $color-tertiaire;
     }
+   /* .title{
+        content: "";
+        width: 40px;
+        border-bottom: 4px solid $color-tertiaire;
+    }*/
 }
 
 .menu__tarif{
@@ -279,7 +287,7 @@ main{
      .bloc{
          top: 100%;
      }
-     .contain-heading__img{
+    .contain-heading__img{
         img{
             height: 1000px;
             width: 100vw;

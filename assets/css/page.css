@@ -43,6 +43,11 @@ header .logo {
   margin: auto;
   align-items: center;
 }
+header .flex {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
 
 main .container {
   grid-area: main;
@@ -85,13 +90,16 @@ main .container .contain-heading__img {
 .bloc-menu__etape {
   display: grid;
   grid-template-columns: 1fr;
+  /* .title{
+       content: "";
+       width: 40px;
+       border-bottom: 4px solid $color-tertiaire;
+   }*/
 }
-.bloc-menu__etape h3 {
+.bloc-menu__etape .title {
   grid-column: 1/-1;
   margin-left: 3%;
-}
-.bloc-menu__etape h3 {
-  content: "";
+  /*content: "";*/
   width: 40px;
   border-bottom: 4px solid #99E2D0;
 }
