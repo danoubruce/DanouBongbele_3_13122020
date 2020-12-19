@@ -32,8 +32,13 @@ main{
         flex-direction: column;
         .contain-heading__img{
             object-fit: cover;
+            overflow: hidden;
+            width: 100vw;
             max-height: 240px;
         }
+            /*object-fit: contain;
+            max-height: 240px;*/
+        
     }
 }
 .bloc{
@@ -277,21 +282,13 @@ main{
                             "menu3 menu3" 
                             "bouton bouton" ;  
     }
-    .footer{
+   /* .footer{
         @include footer;
-        z-index: 1;
-        opacity: 1;
-    } 
+    } */
  }
  @media only screen and (min-width:1101px) {
      .bloc{
          top: 100%;
-     }
-    .contain-heading__img{
-        img{
-            height: 1000px;
-            width: 100vw;
-        }
      }
     .bloc-menu{
         display: grid;
@@ -299,9 +296,7 @@ main{
         grid-template-areas:"menu1 menu2 menu3"
                             "bouton bouton bouton" ;
     }
-    .footer{
+    /*.footer{
         @include footer;
-        z-index: 1;
-       opacity: 1;
-     }
+     }*/
  }
