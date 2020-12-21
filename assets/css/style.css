@@ -14,13 +14,6 @@ body {
   width: 100vw;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  /*display: grid;
-  grid-template-columns: 1fr;
-  border: 1px solid #f2f2f2;
-  overflow-x: hidden;
-  grid-template-areas: "header"
-                       "main"
-                       "footer";*/
   display: flex;
   flex-direction: column;
 }
@@ -60,14 +53,14 @@ body {
     width: 100vw;
   }
 }
-main {
+.main-accueil {
   grid-area: main;
   display: grid;
   grid-template-rows: 50px 286px 440px 1226.5px;
   grid-template-areas: "heading" "menu" "fonctionnement" "restaurants";
 }
 
-header {
+.header-accueil {
   grid-area: header;
   height: 64px;
   padding: 20px;
@@ -75,7 +68,7 @@ header {
   align-items: center;
   margin: auto;
 }
-header .logo {
+.header-accueil .logo {
   width: 10.31rem;
   text-align: center;
   margin: auto;
@@ -113,21 +106,30 @@ header .logo {
   margin-bottom: 1.75rem;
 }
 .menu .btn {
-  background: linear-gradient(#FF79DA, #9356DC);
+  display: inline-block;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   border-radius: 25px;
   width: 13.75rem;
   height: 3.2rem;
-  margin: auto;
+  margin: 0 auto;
   padding: 15px;
   font-size: 1rem;
   font-weight: 500;
+  color: #fff;
+  text-decoration: none;
   border: none;
-  box-shadow: 0 3px 8px #c2c2c2;
+  box-shadow: 0 0 8px #c2c2c2;
   cursor: pointer;
 }
 .menu .btn a {
   text-decoration: none;
   color: #fff;
+  /*&:hover{
+      background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
+  }*/
+}
+.menu .btn :hover {
+  background: linear-gradient(170deg, #ffc6ef, #bc95e9);
 }
 
 .fonctionnement {
@@ -243,15 +245,15 @@ header .logo {
 }
 .restaurants-text .restaurants-text__i:hover .icon-plein {
   display: block;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  background: -moz-linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(45deg, #9356DC, #FF79DA);
+  background: -moz-linear-gradient(45deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  animation: coeur 5s;
+  animation: coeur 5s ease-in-out;
 }
 @keyframes coeur {
   0% {

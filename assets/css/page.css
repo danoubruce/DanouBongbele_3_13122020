@@ -14,18 +14,11 @@ body {
   width: 100vw;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  /*display: grid;
-  grid-template-columns: 1fr;
-  border: 1px solid #f2f2f2;
-  overflow-x: hidden;
-  grid-template-areas: "header"
-                       "main"
-                       "footer";*/
   display: flex;
   flex-direction: column;
 }
 
-header {
+.header-page {
   grid-area: header;
   height: 64px;
   padding: 20px;
@@ -37,26 +30,24 @@ header {
   width: 66%;
   margin-right: 28%;
 }
-header .logo {
+.header-page .logo {
   width: 10.31rem;
   text-align: center;
   margin: auto;
   align-items: center;
 }
-header .flex {
+.header-page .flex {
   color: #000;
   font-weight: 600;
   font-size: 1.3rem;
 }
 
-main .container {
+.main-page .container {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  /*object-fit: contain;
-  max-height: 240px;*/
 }
-main .container .contain-heading__img {
+.main-page .container .contain-heading__img {
   object-fit: cover;
   overflow: hidden;
   width: 100vw;
@@ -94,16 +85,10 @@ main .container .contain-heading__img {
 .bloc-menu__etape {
   display: grid;
   grid-template-columns: 1fr;
-  /* .title{
-       content: "";
-       width: 40px;
-       border-bottom: 4px solid $color-tertiaire;
-   }*/
 }
 .bloc-menu__etape .title {
   grid-column: 1/-1;
   margin-left: 3%;
-  /*content: "";*/
   width: 40px;
   border-bottom: 4px solid #99E2D0;
 }
@@ -144,7 +129,8 @@ main .container .contain-heading__img {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  animation: coeur 5s;
+  /*animation: coeur 5s;*/
+  animation: coeur 200ms 100ms ease;
 }
 @keyframes coeur {
   0% {
@@ -289,16 +275,19 @@ main .container .contain-heading__img {
 }
 .btn {
   grid-area: bouton;
-  background: linear-gradient(#FF79DA, #9356DC);
+  display: inline-block;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   border-radius: 25px;
   width: 13.75rem;
   height: 3.2rem;
-  margin: auto;
+  margin: 0 auto;
   padding: 15px;
   font-size: 1rem;
   font-weight: 500;
+  color: #fff;
+  text-decoration: none;
   border: none;
-  box-shadow: 0 3px 8px #c2c2c2;
+  box-shadow: 0 0 8px #c2c2c2;
   cursor: pointer;
   width: 188px;
   margin-bottom: 30px;
@@ -307,6 +296,12 @@ main .container .contain-heading__img {
 .btn a {
   text-decoration: none;
   color: #fff;
+  /*&:hover{
+      background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
+  }*/
+}
+.btn :hover {
+  background: linear-gradient(170deg, #ffc6ef, #bc95e9);
 }
 
 .footer {
@@ -359,10 +354,6 @@ main .container .contain-heading__img {
     row-gap: 1rem;
     grid-template-areas: "menu1 menu2" "menu3 menu3" "bouton bouton";
   }
-
-  /* .footer{
-       @include footer;
-   } */
 }
 @media only screen and (min-width: 1101px) {
   .bloc {
@@ -374,10 +365,6 @@ main .container .contain-heading__img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "menu1 menu2 menu3" "bouton bouton bouton";
   }
-
-  /*.footer{
-      @include footer;
-   }*/
 }
 
 /*# sourceMappingURL=page.css.map */

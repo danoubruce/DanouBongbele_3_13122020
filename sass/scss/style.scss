@@ -27,28 +27,27 @@ body{
         animation: load-spinner 3s 100ms linear backwards;
     }
 }
-   
-  @keyframes load-spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    75% {
-      opacity: 0.75;
-    }
-    100% {
-      transform: rotate(3turn);
-      opacity: 0;
-    }
-  }
-  @keyframes load-background {
-    0%, 100% {
+@keyframes load-spinner {
+  0% {
+    transform: rotate(0deg);
+   }
+  75% {
+    opacity: 0.75;
+   }
+  100% {
+    transform: rotate(3turn);
+    opacity: 0;
+   }
+}
+@keyframes load-background {
+  0%, 100% {
       transform: scale(1);
       height: 100vh;
       width: 100vw;
     }
-  }
+}
 
-main{
+.main-accueil{
     grid-area: main;
     display: grid;
     grid-template-rows:  50px 286px 440px 1226.5px ;
@@ -58,8 +57,8 @@ main{
                          "restaurants";
                          
 }
-header{
-    @include header;
+.header-accueil{
+    @include header-accueil;
 }
 .heading{
     grid-area: heading;
@@ -198,15 +197,15 @@ header{
         &:hover{
             .icon-plein{
                 display: block;
-                background: linear-gradient($color-primaire, $color-secondaire);
-                background: -webkit-linear-gradient($color-primaire, $color-secondaire);
-                background: -moz-linear-gradient($color-primaire, $color-secondaire);
+                background: linear-gradient(45deg,$color-primaire, $color-secondaire);
+                background: -webkit-linear-gradient(45deg,$color-primaire, $color-secondaire);
+                background: -moz-linear-gradient(45deg,$color-primaire, $color-secondaire);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
-                animation: coeur 5s;
+                animation: coeur 5s ease-in-out;
             }
             @keyframes coeur {
                 0%{
