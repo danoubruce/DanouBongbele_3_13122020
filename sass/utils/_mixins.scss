@@ -1,0 +1,114 @@
+@mixin header {
+    grid-area: header;
+    height: 64px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: auto ;
+    .logo{
+        @include logo;
+    }
+}
+@mixin header-page{
+    .header-page{
+        @include header;
+        display: flex;
+        justify-content: space-between;
+        width: 66%;
+        margin-right: 28%;
+        .flex{
+            color: $color;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+    }
+   
+}
+@mixin body {
+        margin: 0 auto;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        font-family: $fontfam;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+}
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+@mixin footer {
+    grid-area: footer;
+    padding: 0 0 38px 24px;
+    background-color: $color;
+    opacity: 0.8;
+    .footer__h3{
+        font-family: $fontfam-title;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .footer__element{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "premier" "deuxieme";
+        .footer__element-content{
+            line-height: 1.7rem;
+            font-size: 0.95rem; 
+            a{
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                i{
+                    font-size: 0.8rem;
+                    width: 9px;
+                    margin-right: 10px; 
+                }
+            }    
+        }  
+    }
+    .footer__element-content{
+        &:nth-child(1){
+            grid-area: premier;
+            a{
+                display: flex;
+                align-items: center;
+            }
+        }
+        &:nth-child(2){
+            grid-area: deuxieme;
+        }
+    }
+}
+@mixin logo {
+    width: 10.31rem;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+@mixin btn {
+    display: inline-block;
+    background: linear-gradient(170deg,$color-secondaire,$color-primaire);
+    border-radius: 25px;
+    width: 13.75rem;
+    height: 3.2rem;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-white;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 8px #c2c2c2;
+    cursor: pointer; 
+    & a{
+        text-decoration: none;
+        color: $color-white;
+    }
+    & :hover{
+        background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
+    }
+}

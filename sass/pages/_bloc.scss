@@ -1,0 +1,95 @@
+.bloc{
+    background-color: $color-font;
+    border-radius: 35px 35px 0 0;
+    padding: 10px 2.5% 40px 1%;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+}
+.bloc-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    grid-template-areas:"menu1"
+                        "menu2"
+                        "menu3" 
+                        "bouton";
+    &:nth-child(1){
+        grid-area: menu1;
+        align-items: flex-start;
+    }
+    &:nth-child(2){
+        grid-area: menu2;
+        align-items: flex-start;
+    }
+    &:nth-child(3){
+        grid-area: menu3;
+        align-items: flex-start;
+    }
+}
+.bloc-menu__etape{
+    display: grid;
+    grid-template-columns: 1fr;
+    .title{
+        grid-column: 1/-1;
+        margin-left: 3%;
+        width: 40px;
+        border-bottom: 4px solid $color-tertiaire;
+    }
+}
+.menu__tarif{
+    display: block;
+    position: absolute;
+}
+.bloc-heading{
+    @include flex;
+    width: 90%;
+    .bloc-heading__text{
+        font-size: 1.7rem;
+        font-family: $fontfam-title;
+    }
+}
+.bloc-heading__icon{
+    font-size: 1.5rem;
+    .icon-plein{
+        display: none;
+    }
+    .icon-vide{
+        display: block;
+    }
+    &:hover{
+        .icon-plein{
+            display: block;
+            background: linear-gradient($color-primaire, $color-secondaire);
+            background: -webkit-linear-gradient($color-primaire, $color-secondaire);
+            background: -moz-linear-gradient($color-primaire, $color-secondaire);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            /*animation: coeur 5s;*/ 
+            animation: coeur 200ms 100ms ease;
+        }
+        @keyframes coeur {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .icon-vide{
+            display: none;
+        }
+    }
+}
+.brochure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+.brochure--page2{
+    height: 334px;
+}

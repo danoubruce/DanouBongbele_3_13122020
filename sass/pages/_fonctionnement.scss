@@ -1,0 +1,55 @@
+.fonctionnement{
+    grid-area: fonctionnement;
+    padding: 30px 20px 65px 20px ;
+    .fonctionnement__box{
+        display: grid;
+        row-gap: 20px;
+        grid-template-columns: 1fr;
+        text-decoration: none;
+        align-items: center;
+    }
+    .fonctionnement-title{
+        margin-left: 5%;
+    }
+}
+.fonctionnement-div{
+    background-color: $color-font;
+    border-radius: 20px;
+    padding: 1.75rem;
+    width: 90%;
+    margin: auto;
+    &:hover{
+        background-color: lighten($color-primaire, 35%);
+        .a-text i{
+            font-size: 1.2rem;
+            color: $color-primaire;
+        }
+    }
+    & a{
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        color: $color;
+        font-weight: 600;
+        &:hover{
+                background-color: $color;
+        }
+    }
+}
+.a-chiffre{
+    position: absolute;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: $color-white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: $color-primaire;
+    top: 12px;
+    right: 0;
+    transform: translate(-50%,-50%);
+}
+.a-text span{
+    margin-left: 6.6%;
+    margin-right: 10.66%;
+}

@@ -1,0 +1,161 @@
+
+.menu {
+    border-radius: 20px;
+    position: relative;
+    padding: 11px 0 11px 11px;
+    width: 96%;
+    height: 70px;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 8px #c2c2c2;
+    margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    display: flex;
+    justify-content: space-between;
+    &:nth-child(1){
+        animation: defile 800ms 200ms forwards;
+    }
+    &:nth-child(2){
+        animation: defile 800ms 400ms forwards;
+    }
+    &:nth-child(3){
+        animation: defile 800ms 600ms forwards;
+    }
+    &:nth-child(4){
+        animation: defile 800ms 800ms forwards;
+    }
+    &__text{
+        width: 80%;
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: width 300ms 100ms linear;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .titre_plat{
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;      
+        }
+        .sous-titre{
+            margin: 0;
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            overflow: hidden;
+            text-overflow: ellipsis;  
+        }
+    }
+    .anim-box-icon{
+        display: flex;
+        
+        background-color: $color-tertiaire;
+        width: 72px;
+        height: 70px;
+        padding-right: 0;
+        border-radius: 0 20px 20px 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 300ms 100ms linear;
+        
+        .anim-icon{
+            color: #fff;
+            font-size: 1.6rem;
+            margin: auto;
+            transform: rotate(0deg);
+            transition: transform 300ms 100ms linear;
+        }
+    }
+    &__tarif{
+        align-self: flex-end;
+        color: #363636;
+        font-weight: 700;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        transform-origin: right;
+        transition: transform 300ms 100ms linear;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover .menu__text{
+            width: 60%;
+            .sous-titre{
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .titre_plat{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+    }
+    &:hover .anim-box-icon{
+            transform: scaleX(1);
+    }
+    &:hover .anim-icon{
+            transform: rotate(360deg);
+    }
+    &:hover .menu__tarif{
+            transform: translateX(-72px);
+    }
+}
+            
+@keyframes box-icon {
+    0%{
+        transform: translateX(50px);
+    }
+    100%{
+        transform: translate(-50px);
+    }
+}
+@keyframes defile{
+    0%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}.menu-accueil{
+    grid-area: menu;
+    padding: 35px 30px 55px 37px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: $color-font;
+    h2{
+        width: 15rem;
+        margin: 0 auto;
+    }
+    p{
+        font-size: 1.1rem;
+        margin-bottom: 1.75rem;
+    } 
+    & .btn{
+        /*@include btn;*/ 
+        display: inline-block;
+    background: linear-gradient(170deg,$color-secondaire,$color-primaire);
+    border-radius: 25px;
+    width: 13.75rem;
+    height: 3.2rem;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-white;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 8px #c2c2c2;
+    cursor: pointer; 
+    & a{
+        text-decoration: none;
+        color: $color-white;
+    }
+    & :hover{
+        background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
+    }
+    } 
+}

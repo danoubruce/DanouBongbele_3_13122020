@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: $fontfam;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.loading-spinner {
+    display: flex;                                                                                                                                                                                                                                                                                     
+    position: fixed;
+    z-index: 3;
+    transform: scale(0);
+    background-color: $color;
+    animation: load-background 3s 100ms backwards;
+    .spinner {
+        transform: scale(0);
+        font-size: 8rem;
+        color: $color-white;
+        margin: auto;
+        animation: load-spinner 3s 100ms linear backwards;
+    }
+}
+@keyframes load-spinner {
+  0% {
+    transform: rotate(0deg);
+   }
+  75% {
+    opacity: 0.75;
+   }
+  100% {
+    transform: rotate(3turn);
+    opacity: 0;
+   }
+}
+@keyframes load-background {
+  0%, 100% {
+      transform: scale(1);
+      height: 100vh;
+      width: 100vw;
+    }
+}

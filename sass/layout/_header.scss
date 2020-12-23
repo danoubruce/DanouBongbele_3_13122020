@@ -1,0 +1,15 @@
+.header{
+    @include header;
+}
+.header-page{
+    @include header;
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin-right: 28%;
+    .flex{
+        color: $color;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+}

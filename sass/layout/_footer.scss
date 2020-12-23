@@ -1,0 +1,44 @@
+footer{
+    @include footer; 
+    grid-area: footer;
+    padding: 0 0 38px 24px;
+    background-color: $color;
+    opacity: 0.8;
+    .footer__h3{
+        font-family: $fontfam-title;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .footer__element{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "premier" "deuxieme";
+        .footer__element-content{
+            line-height: 1.7rem;
+            font-size: 0.95rem; 
+            a{
+                color: #fff;
+                text-decoration: none;
+                display: block;
+                i{
+                    font-size: 0.8rem;
+                    width: 9px;
+                    margin-right: 10px; 
+                }
+            }    
+        }  
+    }
+    .footer__element-content{
+        &:nth-child(1){
+            grid-area: premier;
+            a{
+                display: flex;
+                align-items: center;
+            }
+        }
+        &:nth-child(2){
+            grid-area: deuxieme;
+        }
+    }
+}
