@@ -20,7 +20,7 @@ body{
     position: fixed;
     z-index: 3;
     transform: scale(0);
-    background-color: $color;
+    background-color: $color-black;
     animation: load-background 3s 100ms backwards;
     .spinner {
         transform: scale(0);

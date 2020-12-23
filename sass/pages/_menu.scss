@@ -135,27 +135,26 @@
         margin-bottom: 1.75rem;
     } 
     & .btn{
-        /*@include btn;*/ 
         display: inline-block;
-    background: linear-gradient(170deg,$color-secondaire,$color-primaire);
-    border-radius: 25px;
-    width: 13.75rem;
-    height: 3.2rem;
-    margin: 0 auto;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: $color-white;
-    text-decoration: none;
-    border: none;
-    box-shadow: 0 0 8px #c2c2c2;
-    cursor: pointer; 
-    & a{
-        text-decoration: none;
+        background: linear-gradient(170deg,$color-secondaire,$color-primaire);
+        border-radius: 25px;
+        width: 13.75rem;
+        height: 3.2rem;
+        margin: 0 auto;
+        padding: 15px;
+        font-size: 1rem;
+        font-weight: 500;
         color: $color-white;
-    }
-    & :hover{
-        background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
-    }
+        text-decoration: none;
+        border: none;
+        box-shadow: 0 0 8px #c2c2c2;
+        cursor: pointer; 
+        & a{
+            text-decoration: none;
+            color: $color-white;
+        }
+        & :hover{
+            background: linear-gradient(170deg, lighten($color-secondaire, 15%), lighten($color-primaire, 15%));
+        }
     } 
 }

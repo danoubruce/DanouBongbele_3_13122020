@@ -1,23 +1,26 @@
-.main-accueil{
+
+.main-accueil {
     grid-area: main;
-    display: grid;
-    grid-template-rows:  50px 286px 440px 1226.5px ;
-    grid-template-areas: "heading"
-                         "menu"
-                         "fonctionnement"
-                         "restaurants";
-                         
+    /*display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "heading" "menu" "fonctionnement" "restaurants";*/ 
+    display: flex;
+    flex-direction: column;
 }
-.main-page{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-    .container{
+  
+.main-page {
+    .container {
         grid-area: main;
         display: flex;
         flex-direction: column;
-        .contain-heading__img{
-            object-fit: cover;
-            overflow: hidden;
+        .contain-heading__img {
             width: 100vw;
-            max-height: 240px;
-        }   
+            height: 225px;
+            & img{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+            }
+        }
     }
 }

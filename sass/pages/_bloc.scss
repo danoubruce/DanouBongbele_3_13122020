@@ -2,7 +2,7 @@
     background-color: $color-font;
     border-radius: 35px 35px 0 0;
     padding: 10px 2.5% 40px 1%;
-    width: 100%;
+    width: 100vw;
     margin: auto;
     z-index: 1;
 }
@@ -92,4 +92,19 @@
 }
 .brochure--page2{
     height: 334px;
+}
+@media screen and (min-width:700px) {
+    .bloc-menu{
+        grid-template-columns: 1fr 1fr;
+        /*row-gap: 1rem;*/
+        grid-template-areas:"menu1 menu2"
+                            "menu3 menu3" ;
+                            /*"bouton";*/
+    }
+}
+@media screen and (min-width:1024px) {
+    .bloc-menu{
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"menu1 menu2 menu3";
+    }
 }

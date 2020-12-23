@@ -29,10 +29,10 @@
         position: relative;
         text-align: center;
         text-decoration: none;
-        color: $color;
+        color: $color-black;
         font-weight: 600;
         &:hover{
-                background-color: $color;
+                background-color: $color-black;
         }
     }
 }
@@ -52,4 +52,21 @@
 .a-text span{
     margin-left: 6.6%;
     margin-right: 10.66%;
+}
+@media screen and (min-width: 700px) {
+    .fonctionnement{
+        .fonctionnement__box{
+            grid-template-columns: 1fr 1fr;
+            
+        }
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .fonctionnement{
+        .fonctionnement__box{
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+    }
 }
