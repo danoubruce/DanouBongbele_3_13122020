@@ -10,6 +10,13 @@
         grid-template-columns: 1fr;
         row-gap: 1rem;
     }
+    @include breakpoints(tablet){
+        margin: 0 auto;
+        .restaurants-box {
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 .restaurants-img{
     position: relative;
@@ -55,7 +62,7 @@
                 -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
-                animation: coeur 5s ease-in-out;
+                animation: coeur 4s ease-in-out;
             }
             @keyframes coeur {
                 0%{
@@ -84,40 +91,5 @@
     & a{
         text-decoration: none;
         color: $color-black;
-    }
-}
-@media screen and (min-width: 700px) {
-    .main-accueil{
-        grid-template-rows: 50px 300px 300px 700px ;
-        grid-template-areas: "heading" 
-                             "menu"
-                             "fonctionnement" 
-                             "restaurants";
-                             
-    }
-    /*.fonctionnement{
-        margin: 0;
-        padding: 20px;
-        .fonctionnement__box {
-            display: grid;
-            margin: auto;
-            row-gap: 2rem;
-            grid-template-columns: 1fr 1fr;
-            .fonctionnement-div{
-                &:nth-child(3){
-                    margin-left: 50%;
-                }
-            }
-        }
-    }*/
-    .restaurants{
-        /*margin: auto;
-        /*padding: auto;*/
-        margin: 0 auto;
-        .restaurants-box {
-            /*display: grid;*/
-            gap: 1rem;
-            grid-template-columns: 1fr 1fr;
-        }
     }
 }

@@ -2,12 +2,16 @@
     @include header;
 }
 .header-page{
-    @include header;
-    display: flex;
-    justify-content: space-between;
-    width: 66%;
-    margin-right: 28%;
+    position: relative;
+    .logo{
+        @include header;
+        width: auto;
+        height: 4.3rem;
+    }
     .flex{
+        position: absolute;
+        top: 30%;
+        left: 5%;
         color: $color-black;
         font-weight: 600;
         font-size: 1.3rem;

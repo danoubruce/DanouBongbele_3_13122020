@@ -87,7 +87,8 @@
     }
 }
 @mixin logo {
-    width: 10.31rem;
+    width: 10rem;
+    height: auto;
     text-align: center;
     margin: auto;
     align-items: center;
@@ -108,15 +109,17 @@
     @include box-shadow;
     cursor: pointer; 
     grid-column: 1/-1;
-    &--accueil{
-        padding: 15px 22px;
-    }
     & a{
         text-decoration: none;
         color: $color-white;
+        & :hover{
+            background: linear-gradient(170deg, lighten($color-secondaire, 8%), lighten($color-primaire, 8%));
+                @include box-shadow(darken($color-font, 30%));
+        }
     }
-    & :hover{
-        background: linear-gradient(170deg, lighten($color-secondaire, 10%), lighten($color-primaire, 10%));
-            @include box-shadow(darken($color-font, 30%));
+}
+@mixin breakpoints($min-device) {
+    @media screen and (min-width: map-get($breakpoints-map, $min-device)){
+        @content;
     }
 }

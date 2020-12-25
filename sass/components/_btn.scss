@@ -1,11 +1,18 @@
 .btn{
     @include btn;
+    &:hover{
+        background: linear-gradient(170deg, lighten($color-secondaire, 10%), lighten($color-primaire, 10%));
+        @include box-shadow(darken($color-font, 30%));
+    }
 }
-/*.btn-page{
-    @include btn;
-    /*grid-area: bouton;
-    /*width: 188px;
-    transform: scale(1.1);
-    margin-bottom: 30px;
-    margin-top: 12px;
-}*/
+.menu-accueil{
+    .btn{
+        @include btn;
+        &:hover{
+            background: linear-gradient(170deg, lighten($color-secondaire, 10%), lighten($color-primaire, 10%));
+            @include box-shadow(darken($color-font, 30%));
+        }
+    }
+}
+
+
