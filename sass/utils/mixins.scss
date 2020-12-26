@@ -118,6 +118,11 @@
         }
     }
 }
+
+@mixin animation-heart {
+    animation: coeur 2s ease-in-out; 
+}
+
 @mixin breakpoints($min-device) {
     @media screen and (min-width: map-get($breakpoints-map, $min-device)){
         @content;

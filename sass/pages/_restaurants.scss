@@ -3,6 +3,7 @@
     background-color: $color-font;
     padding: 30px 20px 60px 20px ;
     margin: 0;
+    width: 100%;
     .restaurants-box{
         margin: 0;
         padding: 0;
@@ -62,7 +63,7 @@
                 -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -moz-text-fill-color: transparent;
-                animation: coeur 4s ease-in-out;
+                @include animation-heart;
             }
             @keyframes coeur {
                 0%{
@@ -83,7 +84,7 @@
 }
 
 .restaurants-box__part{
-    width: auto;
+    width: 100%;
     margin: auto;
     text-decoration: none;
     border-radius: 20px;

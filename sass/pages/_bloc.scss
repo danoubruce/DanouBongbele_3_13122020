@@ -66,14 +66,14 @@
     .icon-vide{
         display: block;
     }
-    &:active{
+    &:hover{
         .icon-plein{
             display: block;
             background: linear-gradient($color-primaire, $color-secondaire);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
-            animation: coeur 2s ease;
+            @include animation-heart;
         }
         @keyframes coeur {
             0%{
