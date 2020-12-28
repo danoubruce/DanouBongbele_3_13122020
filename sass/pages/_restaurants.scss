@@ -1,7 +1,7 @@
 .restaurants{
     grid-area: restaurants;
     background-color: $color-font;
-    padding: 30px 20px 60px 20px ;
+    padding: 30px 30px 60px 20px ;
     margin: 0;
     width: 100%;
     .restaurants-box{
@@ -89,6 +89,7 @@
     text-decoration: none;
     border-radius: 20px;
     background-color: $color-white;
+    @include box-shadow(darken($color-font, 30%));
     & a{
         text-decoration: none;
         color: $color-black;

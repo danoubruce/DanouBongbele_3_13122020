@@ -245,7 +245,6 @@ footer .footer__element-content:nth-child(2) {
   padding: 10px 2.5% 40px 1%;
   width: 100vw;
   margin: auto;
-  /*z-index: 1;*/
 }
 
 .bloc-menu {
@@ -320,6 +319,8 @@ footer .footer__element-content:nth-child(2) {
   display: block;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   animation: coeur 2s ease-in-out;
@@ -378,7 +379,7 @@ footer .footer__element-content:nth-child(2) {
   border-radius: 20px;
   padding: 1.75rem;
   width: 95%;
-  height: 68px;
+  height: 72px;
   margin: auto;
   box-shadow: 0 0 8px #F2F2F2;
 }
@@ -415,6 +416,7 @@ footer .footer__element-content:nth-child(2) {
 }
 
 .a-chiffre {
+  align-self: center;
   font-weight: 300;
   font-size: 0.9rem;
   color: #fff;
@@ -430,7 +432,7 @@ footer .footer__element-content:nth-child(2) {
 .restaurants {
   grid-area: restaurants;
   background-color: #F2F2F2;
-  padding: 30px 20px 60px 20px;
+  padding: 30px 30px 60px 20px;
   margin: 0;
   width: 100%;
 }
@@ -523,6 +525,7 @@ footer .footer__element-content:nth-child(2) {
   text-decoration: none;
   border-radius: 20px;
   background-color: #fff;
+  box-shadow: 0 3px 8px #a6a6a6;
 }
 .restaurants-box__part a {
   text-decoration: none;
@@ -573,7 +576,7 @@ footer .footer__element-content:nth-child(2) {
   height: 70px;
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 0 8px #c2c2c2;
+  box-shadow: 0 3px 8px #a6a6a6;
   margin: auto;
   display: flex;
   justify-content: space-between;

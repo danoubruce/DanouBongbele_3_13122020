@@ -24,7 +24,7 @@
     border-radius: 20px;
     padding: 1.75rem;
     width: 95%;
-    height: 68px;
+    height: 72px;
    
     margin: auto;
     box-shadow: 0 0 8px $color-font;
@@ -63,6 +63,7 @@
     }
 }
 .a-chiffre{
+    align-self: center;
     font-weight: 300;
     font-size: 0.9rem;
     color: $color-white;

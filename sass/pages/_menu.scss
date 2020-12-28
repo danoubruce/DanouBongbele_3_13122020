@@ -6,8 +6,8 @@
     width: 96%;
     height: 70px;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 8px #c2c2c2;
+    background-color: $color-white;
+    @include box-shadow(darken($color-font, 30%));
     margin: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     display: flex;
     justify-content: space-between;
@@ -49,7 +49,6 @@
     }
     .anim-box-icon{
         display: flex;
-        
         background-color: $color-tertiaire;
         width: 72px;
         height: 70px;
@@ -147,7 +146,7 @@
         color: $color-white;
         text-decoration: none;
         border: none;
-        box-shadow: 0 0 8px #c2c2c2;
+        box-shadow: 0 0 8px $color-font;
         cursor: pointer; 
         & a{
             text-decoration: none;

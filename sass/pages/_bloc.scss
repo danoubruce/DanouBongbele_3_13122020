@@ -4,7 +4,6 @@
     padding: 10px 2.5% 40px 1%;
     width: 100vw;
     margin: auto;
-    /*z-index: 1;*/
 }
 .bloc-menu{
     display: grid;
@@ -71,6 +70,8 @@
             display: block;
             background: linear-gradient($color-primaire, $color-secondaire);
             background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
             @include animation-heart;

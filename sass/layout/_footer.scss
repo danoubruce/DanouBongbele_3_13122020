@@ -16,9 +16,9 @@ footer{
         grid-template-areas: "premier" "deuxieme";
         .footer__element-content{
             line-height: 1.7rem;
-            font-size: 0.95rem; 
+            font-size: 0.95rem;
             a{
-                color: #fff;
+                color: $color-white;
                 text-decoration: none;
                 display: block;
                 i{
