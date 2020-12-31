@@ -197,14 +197,6 @@ footer .footer__element-content:nth-child(2) {
   cursor: pointer;
   grid-column: 1/-1;
 }
-.btn a {
-  text-decoration: none;
-  color: #fff;
-}
-.btn a :hover {
-  background: linear-gradient(170deg, #ffa2e5, #a978e3);
-  box-shadow: 0 3px 8px #a6a6a6;
-}
 .btn:hover {
   background: linear-gradient(170deg, #fface8, #ae80e5);
   box-shadow: 0 3px 8px #a6a6a6;
@@ -226,14 +218,6 @@ footer .footer__element-content:nth-child(2) {
   box-shadow: 0 3px 8px #F2F2F2;
   cursor: pointer;
   grid-column: 1/-1;
-}
-.menu-accueil .btn a {
-  text-decoration: none;
-  color: #fff;
-}
-.menu-accueil .btn a :hover {
-  background: linear-gradient(170deg, #ffa2e5, #a978e3);
-  box-shadow: 0 3px 8px #a6a6a6;
 }
 .menu-accueil .btn:hover {
   background: linear-gradient(170deg, #fface8, #ae80e5);
