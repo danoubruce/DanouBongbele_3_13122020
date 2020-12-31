@@ -252,6 +252,7 @@ footer .footer__element-content:nth-child(2) {
   font-weight: 500;
   color: #fff;
   text-decoration: none;
+  text-align: center;
   border: none;
   -webkit-box-shadow: 0 3px 8px #F2F2F2;
           box-shadow: 0 3px 8px #F2F2F2;
