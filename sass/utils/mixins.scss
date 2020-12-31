@@ -110,14 +110,10 @@
     @include box-shadow;
     cursor: pointer; 
     grid-column: 1/-1;
-    & a{
-        text-decoration: none;
-        color: $color-white;
-        & :hover{
-            background: linear-gradient(170deg, lighten($color-secondaire, 8%), lighten($color-primaire, 8%));
-                @include box-shadow(darken($color-font, 30%));
-        }
-    }
+    & :hover{
+         background: linear-gradient(170deg, lighten($color-secondaire, 8%), lighten($color-primaire, 8%));
+         @include box-shadow(darken($color-font, 30%));
+           }
 }
 
 @mixin animation-heart {
